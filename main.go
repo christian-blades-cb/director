@@ -1,4 +1,4 @@
-package main
+package main // import "github.com/christian-blades-cb/director"
 
 import (
 	"encoding/json"
@@ -20,7 +20,7 @@ func main() {
 		RedirectorReadTimeout  int64  `long:"redirector-readtimeout" default:"5" description:"number of seconds to wait for request before closing the connection" env:"REDIRECTOR_READTIMEOUT"`
 		RedirectorWriteTimeout int64  `long:"redirector-writetimeout" default:"2" description:"number of seconds to wait for a response before closing the connection" env:"REDIRECTOR_WRITETIMEOUT"`
 
-		AdminBinding string `long:"admin-bind" default:"8888" description:"ip:port to bind the admin interfact" env:"ADMIN_BIND"`
+		AdminBinding string `long:"admin-bind" default:":8888" description:"ip:port to bind the admin interfact" env:"ADMIN_BIND"`
 
 		StemDBPath string `long:"db-path" default:"stems.db" description:"path to the stems database file" env:"DB_PATH"`
 	}
